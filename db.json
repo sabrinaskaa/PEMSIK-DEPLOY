@@ -145,13 +145,6 @@
         "4",
         "5"
       ]
-    },
-    {
-      "id": "2",
-      "nama": "A11.4412",
-      "mata_kuliah_id": "2",
-      "dosen_id": "5",
-      "mahasiswa_ids": []
     }
   ],
   "mahasiswa": [
