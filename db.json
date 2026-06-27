@@ -139,11 +139,19 @@
       "mata_kuliah_id": "1",
       "dosen_id": "1",
       "mahasiswa_ids": [
+        "1",
         "2",
         "3",
-        "5",
-        "1"
+        "4",
+        "5"
       ]
+    },
+    {
+      "id": "2",
+      "nama": "A11.4412",
+      "mata_kuliah_id": "2",
+      "dosen_id": "5",
+      "mahasiswa_ids": []
     }
   ],
   "mahasiswa": [
@@ -156,9 +164,9 @@
     },
     {
       "id": "2",
-      "nim": "A11.2023.15265",
       "nama": "Budi",
-      "max_sks": 4,
+      "nim": "A11.2023.15265",
+      "max_sks": 20,
       "status": true
     },
     {

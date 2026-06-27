@@ -176,6 +176,52 @@ const RencanaStudi = () => {
     setIsModalOpen(true);
   };
 
+  // Helper to generate next class name
+  const getNextClassName = (kelasItems) => {
+    if (!kelasItems || kelasItems.length === 0) {
+      return "A11.4411";
+    }
+    const namePattern = /^([A-Za-z]+\d*\.)(\d+)$/;
+    let maxNum = 0;
+    let prefix = "A11.";
+
+    kelasItems.forEach((k) => {
+      if (k.nama) {
+        const match = k.nama.match(namePattern);
+        if (match) {
+          const num = parseInt(match[2], 10);
+          if (num > maxNum) {
+            maxNum = num;
+            prefix = match[1];
+          }
+        }
+      }
+    });
+
+    if (maxNum === 0) {
+      // Fallback: check for any trailing digits
+      kelasItems.forEach((k) => {
+        if (k.nama) {
+          const match = k.nama.match(/^(.*?)(\d+)$/);
+          if (match) {
+            const num = parseInt(match[2], 10);
+            if (num > maxNum) {
+              maxNum = num;
+              prefix = match[1];
+            }
+          }
+        }
+      });
+    }
+
+    if (maxNum === 0) {
+      return "A11.4411";
+    }
+
+    const nextNum = maxNum + 1;
+    return `${prefix}${nextNum}`;
+  };
+
   // Handler: submit form tambah kelas
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -185,10 +231,26 @@ const RencanaStudi = () => {
       return;
     }
 
-    await storeKelas({ ...form, mahasiswa_ids: [] });
-    setIsModalOpen(false);
-    toastSuccess("Kelas ditambahkan");
-    fetchData();
+    const nextId = String(
+      kelas.reduce((max, k) => Math.max(max, parseInt(k.id, 10) || 0), 0) + 1
+    );
+    const nextNama = getNextClassName(kelas);
+
+    try {
+      await storeKelas({
+        id: nextId,
+        nama: nextNama,
+        mata_kuliah_id: form.mata_kuliah_id,
+        dosen_id: form.dosen_id,
+        mahasiswa_ids: [],
+      });
+      setIsModalOpen(false);
+      toastSuccess("Kelas ditambahkan");
+      fetchData();
+    } catch (error) {
+      toastError("Gagal menambahkan kelas");
+      console.error(error);
+    }
   };
 
   // Handler: perubahan form

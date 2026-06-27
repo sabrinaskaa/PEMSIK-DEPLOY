@@ -75,7 +75,11 @@ const Kelas = () => {
         resetForm();
       });
     } else {
-      store(formData);
+      const dataToStore = { ...formData };
+      if (!dataToStore.id) {
+        delete dataToStore.id;
+      }
+      store(dataToStore);
       resetForm();
     }
   };
