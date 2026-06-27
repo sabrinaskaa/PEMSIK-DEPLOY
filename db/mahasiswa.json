@@ -1,0 +1,22 @@
+[
+  { "id": "1",  "nama": "Andi",   "nim": "A11.2023.15264", "max_sks": 18, "status": true },
+  { "id": "2",  "nama": "Budi",   "nim": "A11.2023.15265", "max_sks": 20, "status": true },
+  { "id": "3",  "nama": "Citra",  "nim": "A11.2023.15266", "max_sks": 22, "status": true },
+  { "id": "4",  "nama": "Dina",   "nim": "A11.2023.15267", "max_sks": 18, "status": true },
+  { "id": "5",  "nama": "Eko",    "nim": "A11.2023.15268", "max_sks": 24, "status": true },
+  { "id": "6",  "nama": "Fajar",  "nim": "A11.2023.15269", "max_sks": 21, "status": true },
+  { "id": "7",  "nama": "Gita",   "nim": "A11.2023.15270", "max_sks": 20, "status": true },
+  { "id": "8",  "nama": "Hani",   "nim": "A11.2023.15271", "max_sks": 18, "status": true },
+  { "id": "9",  "nama": "Iwan",   "nim": "A11.2023.15272", "max_sks": 20, "status": true },
+  { "id": "10", "nama": "Joko",   "nim": "A11.2023.15273", "max_sks": 18, "status": true },
+  { "id": "11", "nama": "Kiki",   "nim": "A11.2022.14891", "max_sks": 24, "status": true },
+  { "id": "12", "nama": "Lia",    "nim": "A11.2022.14892", "max_sks": 20, "status": true },
+  { "id": "13", "nama": "Maya",   "nim": "A11.2022.14893", "max_sks": 18, "status": true },
+  { "id": "14", "nama": "Nina",   "nim": "A11.2022.14894", "max_sks": 22, "status": true },
+  { "id": "15", "nama": "Oki",    "nim": "A11.2022.14895", "max_sks": 20, "status": true },
+  { "id": "16", "nama": "Putri",  "nim": "A11.2021.13540", "max_sks": 18, "status": true },
+  { "id": "17", "nama": "Qila",   "nim": "A11.2021.13541", "max_sks": 18, "status": true },
+  { "id": "18", "nama": "Rudi",   "nim": "A11.2021.13542", "max_sks": 21, "status": true },
+  { "id": "19", "nama": "Salsa",  "nim": "A11.2021.13543", "max_sks": 18, "status": true },
+  { "id": "20", "nama": "Tino",   "nim": "A11.2021.13544", "max_sks": 18, "status": true }
+]

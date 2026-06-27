@@ -1,0 +1,7 @@
+[
+  { "id": "1", "nidn": "0630048801", "nama": "Slamet", "max_sks": 12 },
+  { "id": "2", "nidn": "0630048802", "nama": "Tini",   "max_sks": 10 },
+  { "id": "3", "nidn": "0630048803", "nama": "Udin",   "max_sks": 14 },
+  { "id": "4", "nidn": "0630048804", "nama": "Vina",   "max_sks": 16 },
+  { "id": "5", "nidn": "0630048805", "nama": "Wawan",  "max_sks": 8  }
+]
